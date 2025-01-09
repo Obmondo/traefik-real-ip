@@ -1,3 +1,3 @@
-module github.com/r3d-shadow/traefik-real-ip
+module github.com/Obmondo/traefik-real-ip
 
 go 1.13

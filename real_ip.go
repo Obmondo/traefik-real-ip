@@ -2,10 +2,8 @@ package traefik_real_ip
 
 import (
 	"context"
-	"net"
 	"net/http"
 	"strings"
-	"strconv"
 )
 
 const (
@@ -27,16 +25,16 @@ func CreateConfig() *Config {
 
 // RealIPOverWriter is a plugin that extracts real IP from X-Forwarded-For header.
 type RealIPOverWriter struct {
-	next             http.Handler
-	name             string
+	next              http.Handler
+	name              string
 	ForwardedForDepth int
 }
 
 // New creates a new RealIPOverWriter plugin.
 func New(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
 	ipOverWriter := &RealIPOverWriter{
-		next:             next,
-		name:             name,
+		next:              next,
+		name:              name,
 		ForwardedForDepth: config.ForwardedForDepth,
 	}
 
