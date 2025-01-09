@@ -1,6 +1,6 @@
 displayName: Traefik Real IP
 type: middleware
-import: github.com/Obmondo/traefik-real-ip
+import: github.com/Obmondo/traefikrealip
 
 summary: When traefik is deployed behind a load balancer, it should get the real IP from the X-Forwarded-For header without getting spoofed.
 

@@ -1,3 +1,3 @@
-module github.com/Obmondo/traefik-real-ip
+module github.com/Obmondo/traefikrealip
 
-go 1.13
+go 1.20
